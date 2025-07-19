@@ -19,10 +19,12 @@ app.use(express.json());
 //EXPORT ROUTES 
 const tutor = require("./routes/tutorRoutes")
 const book = require("./routes/oldBooks")
+const quiz = require("./routes/quiz")
 
 //routes 
 app.use('/api' , tutor)
 app.use("/api/book" , book)
+app.use("/api" , quiz)
 
 // Simple Route
 app.get('/', (req, res) => {
