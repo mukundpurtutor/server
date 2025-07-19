@@ -109,7 +109,7 @@ router.post('/questions', async (req, res) => {
 
 
 // 🔹 Delete entire quiz (questions + attempts)
-router.delete('/quiz', async (req, res) => {
+router.delete('/', async (req, res) => {
   try {
     await Question.deleteMany({});
     await Attempt.deleteMany({});
